@@ -50,4 +50,20 @@ public class Helper {
         return result;
 
     }
+
+    static int maxProfit(ArrayList<Job> result){
+        int sum=0;
+        for(int i=0; i<result.size(); i++){
+            sum+=result.get(i).profit;
+        }
+        return sum;
+    }
+
+    static int[] getDoneJobsID(ArrayList<Job> result){
+        int[] ids = new int[result.size()];
+        for (int i=0; i<result.size();i++){
+            ids[i] = result.get(i).id;
+        }
+        return ids;
+    }
 }
